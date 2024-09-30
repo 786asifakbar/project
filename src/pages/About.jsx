@@ -14,9 +14,9 @@ const About = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className="max-w-screen-lg mx-auto py-10 px-4 md:px-8">
+      <div className="w-screen mx-auto p-10 md:px-8">
         {/* Section 1: Image Left, Text Right */}
-        <p className="text-lg md:text-xl text-black leading-relaxed max-w-screen-lg justify-content-center">
+        <p className="text-lg md:text-xl text-black leading-relaxed max-w-screen mx-24 justify-content-center">
             At Help Human Right Organization of Pakistan, we are committed to standing by human rights organizations 
             as they tirelessly work to uphold justice, equality, and dignity for all. We provide comprehensive support 
             to ensure their voices are heard and their missions fulfilled. Through logistical, financial, and emotional 
