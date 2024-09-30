@@ -1,57 +1,112 @@
-import Carousel from "./Carousel";
-import PassPro from "./PassPro";
-import LeftPro from "./leftPro";
-import HelpProjects from "./HelpProjects";
 
+import HelpProjects from './HelpProjects';
+import Carousel from './Carousel';
 
-const SuportPage = () => {
+const SupportPage = () => {
   return (
     <>
-      <PassPro 
-        backImgsrc="/Web-Icon.png"
-        secImg="/bg4.jpg"
-        title="Our Work"
-        p={`At Help Human Rights Organization of Pakistan, we are profoundly dedicated to supporting human rights organizations in 
-        their unwavering quest to secure justice, equality, and dignity for every individual. Our commitment goes beyond
-         words—it's about action, solidarity, and the belief that together, we can make a difference. We understand that human
-          rights are not privileges granted by a few, but inalienable entitlements belonging to all, and we take pride in 
-          standing side by side with those who lead the fight for these fundamental freedoms.
-          We envision a world where every individual, regardless of their race, gender, religion, nationality, or background,
-           lives free from discrimination, oppression, and fear. A world where the dignity of all people is upheld, where the
-            marginalized are not forgotten, and where justice is not a distant dream but a lived reality. In pursuit of this
-             vision, we stand united with human rights defenders who dedicate their lives to the protection and 
-             promotion of these values, often in the face of great adversity
-    
-           `}
-        rep={`Human rights organizations operate on the frontlines of global change, often working in hostile or resource-scarce environments where the stakes are incredibly high. Whether they are advocating for the rights of the oppressed, fighting against state-sponsored violence, or bringing attention to systemic injustices, their efforts are critical in shaping a just society. At Help Human Rights Organization of Pakistan, we have made it our mission to amplify these voices and bolster their initiatives through a wide range of support mechanisms.
+      {/* Our Work Section */}
+      <div className="py-12 bg-gray-100">
+        <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
+          <h1 className="text-gray-900 text-4xl md:text-5xl lg:text-6xl font-bold">
+            Our Work
+          </h1>
+          <p className="text-gray-700 text-lg md:text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
+            At Help Human Rights Organization of Pakistan, we are profoundly
+            dedicated to supporting human rights organizations in their quest to
+            secure justice, equality, and dignity for every individual. Our
+            commitment goes beyond words—it's about action, solidarity, and the
+            belief that together, we can make a difference.
+          </p>
+        </div>
+      </div>
+      <HelpProjects/>
+      {/* First Section (Image on the Right) */}
+      <div className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6 md:px-12">
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Our Comprehensive Support for Human Rights
+            </h2>
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-4">
+              Human rights organizations operate on the frontlines of global
+              change, often working in hostile or resource-scarce environments.
+              We offer tailored support such as:
+            </p>
+            <ul className="list-disc pl-5 text-gray-700 text-lg space-y-2">
+              <li>Logistical Support for organizing campaigns and protests</li>
+              <li>Financial Aid for expanding reach and impact</li>
+              <li>Technological Solutions to mobilize supporters securely</li>
+              <li>Legal Guidance for navigating complex international laws</li>
+              <li>Emotional Support for activists facing personal challenges</li>
+            </ul>
+          </div>
+          <div className="w-full md:w-1/2">
+            <img
+              src="/bg4.jpg"
+              alt="Supporting Human Rights"
+              className="w-full rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
 
-Our Support: Comprehensive and Holistic
-We recognize that no two challenges are alike, and that’s why our support is tailored to meet the specific needs of each organization. Whether it's offering logistical support—such as arranging safe transport, securing necessary equipment, or coordinating advocacy campaigns—or providing legal guidance to navigate complex international laws, we are here to lighten the load. We also offer technological resources to empower human rights groups with cutting-edge tools for communication, data protection, and outreach. Additionally, through financial assistance, we ensure that lack of funds does not become a barrier to impactful work. Every penny we provide helps to sustain efforts that would otherwise struggle to survive, particularly in conflict zones or under oppressive regimes.`}
-      />
+      {/* Second Section (Image on the Left) */}
+      <div className="py-16 bg-gray-100">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6 md:px-12">
+          <div className="w-full md:w-1/2 order-2 md:order-1">
+            <img
+              src="/bg3.jpg"
+              alt="Empowering Organizations"
+              className="w-full rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="w-full md:w-1/2 order-1 md:order-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Empowering Human Rights Organizations
+            </h2>
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-4">
+              We offer a range of support mechanisms:
+            </p>
+            <ul className="list-disc pl-5 text-gray-700 text-lg space-y-2">
+              <li>
+                Logistical support to assist in organizing relief efforts and
+                protests
+              </li>
+              <li>
+                Financial aid through grants and funding opportunities to expand
+                outreach
+              </li>
+              <li>
+                Technological tools and platforms for awareness and data
+                protection
+              </li>
+              <li>
+                Legal and advocacy services to protect the rights of activists
+              </li>
+              <li>
+                Psychological and emotional support for human rights defenders
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <HelpProjects />
 
-      <LeftPro 
-        imgsrc="/bg3.jpg"
-        heading="Empowering Human Rights Organizations: Standing Together for Change"
-        pera={`
-        Logistical Support: We assist in organizing campaigns, protests, and relief efforts, ensuring that human rights organizations can operate effectively on the ground.
-        Financial Aid: By offering grants and funding opportunities, we empower these organizations to expand their reach and impact, addressing more issues that matter.
-        Technological Solutions: In today’s digital age, we provide human rights defenders with the tools and platforms to raise awareness, mobilize supporters, and protect sensitive data.
-        Legal and Advocacy Services: We offer legal counsel and advocacy support to protect the rights of activists and victims, ensuring justice is served.
-        Psychological and Emotional Support: Defending human rights can take a toll on individuals and communities. We offer mental health services and emotional support for activists, ensuring they have the strength to continue their work.
-        Standing for Freedom, Equality, and Dignity
-        We believe that human rights are universal and non-negotiable. Whether it’s advocating for freedom of speech, fighting against gender-based violence, or ensuring access to education, we are driven by the core belief that everyone deserves to live a life free from oppression. Our work is guided by these principles, and we are honored to play a role in supporting those who defend human dignity at every turn.
-        Join Us in the Fight for Human Rights
-        There has never been a more important time to stand up for human rights. As injustices continue to unfold across the globe, we must act now to support the organizations that are fighting for a better world. Together, we can amplify their voices, fuel their movements, and ensure that their efforts lead to meaningful change.
-        We invite you to join us in this critical mission—whether as a volunteer, donor, or partner. Together, we can make a difference and help build a world where everyone’s rights are upheld and protected.
-
-
-               `}
-      />
+      {/* Join Us Section */}
+      <div className="py-16 bg-white text-black text-center px-6">
+        <h3 className="text-3xl md:text-4xl font-bold mb-6">
+          Join Us in the Fight for Human Rights
+        </h3>
+        <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
+          Whether as a volunteer, donor, or partner, you can make a difference.
+          Together, we can help build a world where everyone's rights are upheld
+          and protected. Join us today in this critical mission.
+        </p>
+      </div>
       <Carousel />
     </>
   );
-}
+};
 
-export default SuportPage;
+export default SupportPage;

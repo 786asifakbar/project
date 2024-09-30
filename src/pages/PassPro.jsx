@@ -7,13 +7,11 @@ const PassPro = (props) => {
 
   return (
     <>
-      <div>
+      <div className=''>
         {/* Hero Section */}
         <div className="relative bg-cover bg-no-repeat bg-center min-h-52" 
           style={{ backgroundImage: `url(${props.backImgsrc})` }}>
           {/* Color overlay */}
-          <div className="absolute inset-0 bg-gray-40 opacity-50"> </div>
-          <div className="lg:w-1/2 lg:pr-8"></div>
           <h1 className="text-7xl font-bold pt-16 text-center text-black">
             {props.title}
           </h1>
