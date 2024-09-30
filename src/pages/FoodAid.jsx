@@ -70,7 +70,7 @@ const FoodAid = () => {
       </div>
 
       {/* Call to Action Section */}
-      <div className="bg-yellow-500 py-10">
+      <div className="bg-white py-10">
         <div className="max-w-6xl mx-auto text-center text-black">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Join Our Mission to Fight Hunger</h2>
           <p className="text-lg max-w-2xl mx-auto mb-6">
@@ -79,7 +79,7 @@ const FoodAid = () => {
           
           {/* NavLink added to the Donate button */}
           <NavLink to="/DonationForm">
-            <button className="bg-white text-yellow-500 font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-100">
+            <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-100">
               Donate Now
             </button>
           </NavLink>
