@@ -1,24 +1,92 @@
-import PassPro from "./PassPro";
-import LeftPro from "./leftPro";
+import React from 'react';
+import { NavLink } from 'react-router-dom'; // Import NavLink for navigation
 
-
-
+// FoodAid Component
 const FoodAid = () => {
+  return (
+    <>
+      {/* Hero Section */}
+      <div className="relative w-full h-[50vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <h1 className="relative text-white text-4xl md:text-5xl font-bold z-10 text-center">
+          Food Distribution Program
+        </h1>
+      </div>
 
-    return(
-   <>
-    <PassPro backImgsrc = "/Web-Icon.png "
-      secImg = "/food.jpg"
-      title = "Food Distribute"
-      p = "Food Aid At Help Human rights, we believe that access to nutritious food is a fundamental human right. Our Food Aid program is dedicated to combating hunger and food insecurity within our community. We provide essential meals and groceries to individuals and families in need,ensuring that no one goes hungry. From distributing food packages to organizing community kitchens, our efforts are focused on delivering sustenance and hope to those struggling to make ends meet.Through partnerships with local farmers, food banks, and volunteers, we are able to offer a variety of fresh and nutritious foods. Our goal is not only to alleviate immediate hunger but also to promote healthy eating habits and improve overall well-being.We prioritize reaching the most vulnerable populations, including children, the elderly,and those facing financial hardships." 
-    />
-    
+      {/* Food Aid Information Section */}
+      <div className="max-w-6xl mx-auto py-10 px-6">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-10">
+          {/* Right Image */}
+          <div className="md:w-1/2 p-5">
+            <img
+              src="/food.jpg"
+              alt="Food Distribution"
+              className="rounded-lg shadow-lg w-full h-auto transition-transform transform hover:scale-105 duration-300"
+            />
+          </div>
+          
+          {/* Left Content */}
+          <div className="md:w-1/2 p-5 text-gray-700">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              Fighting Hunger with Compassion
+            </h2>
+            <p className="text-lg leading-relaxed mb-4">
+              At Help Human Rights, we believe that access to nutritious food is a fundamental human right. Our Food Aid program is dedicated to combating hunger and food insecurity within our community. We provide essential meals and groceries to individuals and families in need, ensuring that no one goes hungry.
+            </p>
+            <p className="text-lg leading-relaxed">
+              From distributing food packages to organizing community kitchens, our efforts are focused on delivering sustenance and hope to those struggling to make ends meet.
+            </p>
+          </div>
+        </div>
+      </div>
 
-      <LeftPro imgsrc ="/food4.jpg"
-      heading = "Your Donations Help Us Create This Impact"
-       pera ="Donations are the lifeline of our Food Aid program. Every contribution helps us purchase food supplies, expand our reach, and improve the quality of our services.With your support, we can source more nutritious food, ensuring that the meals we provide are balanced and nourishing. This is particularly important for children and the elderly,who require specific nutrients for healthy growth and aging. Your donations also enable us to increase the frequency and scale of our food distributions. This means we can serve more people, more often, and in more locations. Whether it's through emergency food packages during crises or regular meal services, your generosity ensures that we can meet the growing demand for food assistance in our community."
-     />
-   </>
-  )
-}
+      {/* Donation Section */}
+      <div className="bg-gray-100 py-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            {/* Left Image */}
+            <div className="md:w-1/2 p-5">
+              <img
+                src="/food4.jpg"
+                alt="Donations Helping"
+                className="rounded-lg shadow-lg w-full h-auto transition-transform transform hover:scale-105 duration-300"
+              />
+            </div>
+
+            {/* Right Content */}
+            <div className="md:w-1/2 p-5 text-gray-700">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Your Donations Help Us Make an Impact
+              </h2>
+              <p className="text-lg leading-relaxed mb-4">
+                Donations are the lifeline of our Food Aid program. Every contribution helps us purchase food supplies, expand our reach, and improve the quality of our services.
+              </p>
+              <p className="text-lg leading-relaxed">
+                With your support, we can source more nutritious food, ensuring that the meals we provide are balanced and nourishing. Your donations also enable us to increase the frequency and scale of our food distributions, helping us serve more people and locations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action Section */}
+      <div className="bg-yellow-500 py-10">
+        <div className="max-w-6xl mx-auto text-center text-black">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Join Our Mission to Fight Hunger</h2>
+          <p className="text-lg max-w-2xl mx-auto mb-6">
+            You can make a difference by supporting our cause. Together, we can ensure that no one in our community goes to bed hungry. Your donations make it all possible.
+          </p>
+          
+          {/* NavLink added to the Donate button */}
+          <NavLink to="/DonationForm">
+            <button className="bg-white text-yellow-500 font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-100">
+              Donate Now
+            </button>
+          </NavLink>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export default FoodAid;
