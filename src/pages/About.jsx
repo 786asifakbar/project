@@ -7,8 +7,8 @@ const About = () => {
     <>
       {/* About Us Section */}
       <div className="bg-cover bg-center py-20" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
-        <div className="max-w-screen-lg mx-auto text-center px-4 md:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About Us</h1>
+        <div className="w-screen-lg mx-auto text-center px-4 md:px-8">
+          <h1 className="text-5xl md:text-5xl font-bold text-black mb-6">About Us</h1>
         </div>
         
       </div>
