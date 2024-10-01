@@ -2,7 +2,7 @@
 
 // Data for the services
 const services = [
-  { name: "Free Children Hospital", icon: "🏥", link: "/children-hospital" },
+  { name: "Free Children Hospital", icon: "🏥", link: "/ChildrenHospital" },
   { name: "Orphanage Home", icon: "🏠", link: "/Orphans" },
   { name: "Old Age Home", icon: "👴👵", link: "/OldAgeHome" },
   { name: "Ration Distribution", icon: "🍞", link: "/FoodAid" },
