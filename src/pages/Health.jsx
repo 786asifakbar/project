@@ -3,7 +3,7 @@ const Health = () => {
     <>
       {/* Hero Section with Video Background */}
       <div className="relative w-full h-[30vh] md:h-[30vh] bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
-        <div className="flex items-center justify-center h-full bg-red-600 bg-opacity-60">
+        <div className="flex items-center justify-center h-fullbg-opacity-60">
           <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold z-10 text-center drop-shadow-lg">
             Your Health, Our Priority
           </h1>

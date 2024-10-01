@@ -6,7 +6,7 @@ const SupportPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="py-20 bg-red-400 text-white text-center">
+      <div className="py-20 text-black text-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
         <h1 className="text-5xl md:text-6xl font-bold drop-shadow-lg">
           Our Work
         </h1>
@@ -107,7 +107,7 @@ const SupportPage = () => {
           </button>
         </a>
       </div>
-<Carousel />
+     <Carousel />
     </>
   );
 };
