@@ -3,8 +3,8 @@ const Health = () => {
     <>
       {/* Hero Section with Video Background */}
       <div className="relative w-full h-[30vh] md:h-[30vh] bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
-        <div className="flex items-center justify-center h-fullbg-opacity-60">
-          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold z-10 text-center drop-shadow-lg">
+        <div className="flex items-center justify-center h-full bg-opacity-60">
+          <h1 className="text-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center drop-shadow-lg">
             Your Health, Our Priority
           </h1>
         </div>
@@ -64,15 +64,15 @@ const Health = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-10">What Our Patients Say</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <p className="text-lg text-gray-700 italic">"The care I received was exceptional, and the staff made me feel safe and comfortable."</p>
+              <p className="text-lg text-gray-700 italic">The care I received was exceptional, and the staff made me feel safe and comfortable.</p>
               <p className="mt-4 text-gray-900 font-bold">- John Doe</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <p className="text-lg text-gray-700 italic">"Thanks to the wonderful doctors, I’m back on my feet and healthier than ever!"</p>
+              <p className="text-lg text-gray-700 italic">Thanks to the wonderful doctors, I’m back on my feet and healthier than ever!</p>
               <p className="mt-4 text-gray-900 font-bold">- Jane Smith</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <p className="text-lg text-gray-700 italic">"This program saved my life. I can't thank the team enough for their care."</p>
+              <p className="text-lg text-gray-700 italic">This program saved my life. I can't thank the team enough for their care.</p>
               <p className="mt-4 text-gray-900 font-bold">- Alex Johnson</p>
             </div>
           </div>

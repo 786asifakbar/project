@@ -8,7 +8,7 @@ const About = () => {
       {/* About Us Section */}
       <div className="relative w-full h-[30vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
         <div className="absolute inset-0 opacity-50"></div>
-        <h1 className="relative text-black text-6xl md:text-5xl font-bold z-10 text-center">
+        <h1 className="relative text-black text-6xl md:text-5xl font-bold text-center">
           About Us 
         </h1>
       </div>
