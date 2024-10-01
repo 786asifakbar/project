@@ -1,4 +1,4 @@
-import React from 'react';
+
 import PassPro from './PassPro';
 import LeftPro from './LeftPro';
 
@@ -6,9 +6,9 @@ const Health = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative w-full h-[60vh] bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
+      <div className="relative w-full h-[30vh] bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
         <div className="flex items-center justify-center h-full">
-          <h1 className="text-white text-4xl md:text-5xl font-bold z-10 text-center">
+          <h1 className="text-black text-5xl md:text-5xl font-bold z-10 text-center">
             Care Your Health
           </h1>
         </div>
@@ -30,7 +30,7 @@ const Health = () => {
 
       {/* Donations Impact Section */}
       <div className="bg-gray-100 py-10">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6 text-black">
           <LeftPro 
             imgsrc="/health3.jpg"
             heading="Your Donations Help Us Create This Impact"
@@ -44,7 +44,7 @@ const Health = () => {
       </div>
 
       {/* Call to Action Section */}
-      <div className="bg-yellow-300 py-10">
+      <div className="bg-white py-10">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Join Us in Making a Difference
@@ -52,8 +52,9 @@ const Health = () => {
           <p className="text-lg text-gray-700 mb-6">
             Your support can provide essential healthcare services to those in need. Together, we can create a healthier community.
           </p>
-          <a href="/donate">
-            <button className="bg-white text-yellow-500 font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 hover:bg-yellow-200">
+          <a href="/DonationForm">
+            <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 
+            px-6 rounded-lg shadow-lg transition duration-300">
               Donate Now
             </button>
           </a>

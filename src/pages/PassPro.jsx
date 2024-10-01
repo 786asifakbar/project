@@ -7,12 +7,12 @@ const PassPro = (props) => {
 
   return (
     <>
-      <div className=''>
+      <div className='container mx-auto p-4'>
         {/* Hero Section */}
-        <div className="relative bg-cover bg-no-repeat bg-center min-h-52" 
+        <div className="relative bg-cover bg-no-repeat bg-center min-h-52 overflow-hidden"  
           style={{ backgroundImage: `url(${props.backImgsrc})` }}>
-          {/* Color overlay */}
-          <h1 className="text-7xl font-bold pt-16 text-center text-black">
+          {/* Color overlay */} 
+          <h1 className="text-7xl font-bold pt-16 text-center text-black overflow-hidden object-cover">
             {props.title}
           </h1>
         </div>
