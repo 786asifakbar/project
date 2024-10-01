@@ -6,7 +6,7 @@ const ShadiMubarak = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[30vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
         <div className="absolute inset-0 opacity-50"></div>
-        <h1 className="relative text-black text-6xl md:text-5xl font-bold text-center">
+        <h1 className="relative text-black text-4xl md:text-4xl font-bold text-center">
         Married Ceremony of Poor People
         </h1>
       </div>
