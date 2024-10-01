@@ -167,7 +167,7 @@ const Navbar = () => {
                   Education
                 </Link>
                 <Link
-                  to="/Helth"
+                  to="/Health"
                   className="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded"
                   onClick={handleMenuToggle}
                 >
