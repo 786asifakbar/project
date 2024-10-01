@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <div className="flex flex-col md:flex-row p-8">
       {/* Left Side */}
-      <div className="w-full md:w-1/2 p-4">
+      <div className="w-full md:w-1/2 p-4 text-black">
         <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
         <p className="mb-4">Contact us at:</p>
         <p className="mb-2">Phone: (123) 456-7890</p>
@@ -14,7 +14,7 @@ const Contact = () => {
           <iframe
             className="w-full h-full"
             title="Google Map"
-            src={`https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=123+Main+Street,City,Country`}
+            src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.0567626221177!2d67.06078377620808!3d24.896045377906194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f74156c5323%3A0x257f1b15998551b7!2sHelp%20Human%20Rights%20Organization%20Of%20Pakistan!5e0!3m2!1sen!2s!4v1727783729949!5m2!1sen!2s`}
             allowFullScreen
           ></iframe>
         </div>
