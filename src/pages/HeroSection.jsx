@@ -1,23 +1,23 @@
-// src/components/HeroSection.js
-import SuportPage from './SuportPage';
+
+
+import SupportPage from './SuportPage';
+
 const HeroSection = () => {
   return (
     <>
-    <div className="relative w-screen h-screen overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 left-0 w-screen
-        h-[40vh] lg:max-w-full lg:h-screen md:max-w-full
-         md:max-h-full sm:w-[40vh] sm:h-[40vh] object-cover"
-      >
-        <source src="/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <SuportPage/>
+      <div className="relative w-full h-[40vh] sm:h-[60vh] md:h-[80vh] lg:h-screen overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src="/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <SupportPage />
     </>
   );
 };
