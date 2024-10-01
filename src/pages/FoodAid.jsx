@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { NavLink } from 'react-router-dom'; // Import NavLink for navigation
 
 // FoodAid Component
@@ -6,9 +6,9 @@ const FoodAid = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative w-full h-[50vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <h1 className="relative text-white text-4xl md:text-5xl font-bold z-10 text-center">
+      <div className="relative w-full h-[30vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
+        <div className="absolute inset-0 bg-red-500 opacity-50"></div>
+        <h1 className="relative text-white text-6xl md:text-5xl font-bold z-10 text-center">
           Food Distribution Program
         </h1>
       </div>

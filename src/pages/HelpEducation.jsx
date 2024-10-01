@@ -2,7 +2,7 @@ const HelpEducation = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative w-full h-[30vh] bg-cover bg-center" style={{ backgroundImage: `url('/education-bg.jpg')` }}>
+      <div className="relative w-full h-[30vh] bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
         <div className="flex items-center justify-center h-full bg-red-600 bg-opacity-50">
           <h1 className="text-white text-6xl md:text-6xl font-bold z-10 text-center drop-shadow-lg">
             Empower the Future through Education

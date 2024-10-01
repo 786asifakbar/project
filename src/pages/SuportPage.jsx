@@ -5,27 +5,25 @@ import Carousel from './Carousel';
 const SupportPage = () => {
   return (
     <>
-      {/* Our Work Section */}
-      <div className="py-12 bg-gray-100">
-        <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
-          <h1 className="text-gray-900 text-4xl md:text-5xl lg:text-6xl font-bold">
-            Our Work
-          </h1>
-          <p className="text-gray-700 text-lg md:text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
-            At Help Human Rights Organization of Pakistan, we are profoundly
-            dedicated to supporting human rights organizations in their quest to
-            secure justice, equality, and dignity for every individual. Our
-            commitment goes beyond words—it's about action, solidarity, and the
-            belief that together, we can make a difference.
-          </p>
-        </div>
+      {/* Hero Section */}
+      <div className="py-20 bg-red-400 text-white text-center">
+        <h1 className="text-5xl md:text-6xl font-bold drop-shadow-lg">
+          Our Work
+        </h1>
+        <p className="text-lg md:text-xl mt-4 max-w-3xl mx-auto leading-relaxed">
+          At Help Human Rights Organization of Pakistan, we are profoundly
+          dedicated to supporting human rights organizations in their quest to
+          secure justice, equality, and dignity for every individual. Our
+          commitment goes beyond words—it's about action, solidarity, and the
+          belief that together, we can make a difference.
+        </p>
       </div>
-      <HelpProjects/>
+
       {/* First Section (Image on the Right) */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6 md:px-12">
           <div className="w-full md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 border-b-4 border-red-500 pb-2 transition-colors duration-300 hover:text-red-500">
               Our Comprehensive Support for Human Rights
             </h2>
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-4">
@@ -45,24 +43,24 @@ const SupportPage = () => {
             <img
               src="/bg4.jpg"
               alt="Supporting Human Rights"
-              className="w-full rounded-lg shadow-lg"
+              className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-110 duration-300"
             />
           </div>
         </div>
       </div>
-
+<HelpProjects />
       {/* Second Section (Image on the Left) */}
-      <div className="py-16 bg-gray-100">
+      <div className="py-16 bg-gray-100 shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6 md:px-12">
           <div className="w-full md:w-1/2 order-2 md:order-1">
             <img
               src="/bg3.jpg"
               alt="Empowering Organizations"
-              className="w-full rounded-lg shadow-lg"
+              className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-110 duration-300"
             />
           </div>
           <div className="w-full md:w-1/2 order-1 md:order-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 border-b-4 border-red-500 pb-2 transition-colors duration-300 hover:text-red-500">
               Empowering Human Rights Organizations
             </h2>
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-4">
@@ -92,19 +90,24 @@ const SupportPage = () => {
         </div>
       </div>
 
-
       {/* Join Us Section */}
       <div className="py-16 bg-white text-black text-center px-6">
-        <h3 className="text-3xl md:text-4xl font-bold mb-6">
+        <h3 className="text-4xl md:text-5xl font-bold mb-6">
           Join Us in the Fight for Human Rights
         </h3>
-        <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
+        <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto mb-8">
           Whether as a volunteer, donor, or partner, you can make a difference.
           Together, we can help build a world where everyone's rights are upheld
           and protected. Join us today in this critical mission.
         </p>
+        <a href="/DonationForm">
+          <button className="mt-4 bg-red-500 text-white font-bold 
+          py-3 px-8 rounded-lg shadow-lg hover:bg-red-600 transition-all duration-300">
+            Get Involved
+          </button>
+        </a>
       </div>
-      <Carousel />
+<Carousel />
     </>
   );
 };
