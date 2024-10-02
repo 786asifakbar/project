@@ -4,7 +4,7 @@ const HelpEducation = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[30vh] bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
         <div className="flex items-center justify-center h-full bg-opacity-50">
-          <h1 className="text-black text-4xl md:text-4xl font-bold text-center drop-shadow-lg">
+          <h1 className="text-black text-4xl md:text-4xl lg:text-6xl font-bold text-center drop-shadow-lg">
             Empower the Future through Education
           </h1>
         </div>

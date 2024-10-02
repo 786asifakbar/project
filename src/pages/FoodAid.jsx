@@ -9,7 +9,7 @@ const FoodAid = () => {
       <div className="relative w-full h-[30vh] flex items-center justify-center bg-cover bg-center"
        style={{ backgroundImage: `url('/Web-Icon.png')` }}>
         <div className="absolute inset-0 opacity-50"></div>
-        <h1 className="relative text-black text-4xl md:text-4xl font-bold text-center">
+        <h1 className="relative text-black text-4xl md:text-4xl lg:text-6xl font-bold text-center">
           Food Distribution Program
         </h1>
       </div>

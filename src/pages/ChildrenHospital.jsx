@@ -7,7 +7,7 @@ const ChildrenHospital = () => {
         style={{ backgroundImage: `url('/Web-Icon.png')` }}
       >
         <div className="absolute inset-0 opacity-50"></div>
-        <div className="relative z-10 text-center">
+        <div className="relative text-center">
           <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg">
             Welcome to Children's Hospital
           </h1>
