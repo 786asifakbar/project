@@ -1,16 +1,38 @@
 const Contact = () => {
   return (
-    <div className="flex flex-col md:flex-row p-8">
-      {/* Left Side */}
-      <div className="w-full md:w-1/2 p-4 text-black">
-        <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-        <p className="mb-4">Contact us at:</p>
-        <p className="mb-2">Phone: (123) 456-7890</p>
-        <p className="mb-2">Email: contact@example.com</p>
-        <p className="mb-4">Address: 123 Main Street, City, Country</p>
-        
-        {/* Google Map API Integration */}
-        <div className="h-64 w-full">
+    <div className="flex flex-col md:flex-row p-6 lg:p-12">
+      {/* Left Side: Get in Touch */}
+      <div className="w-full md:w-1/2 p-6 bg-white shadow-lg rounded-lg mb-6 md:mb-0 transform hover:scale-105 transition-transform duration-300">
+        <h2 className="text-3xl font-extrabold text-center mb-6 text-gray-900">
+          Get in Touch
+        </h2>
+        <p className="text-center text-lg mb-6 text-gray-600">
+          We would love to hear from you! Reach out to us through any of the following channels.
+        </p>
+
+        <div className="space-y-4 text-center">
+          <div className="flex items-center justify-center space-x-3">
+            <span className="text-2xl font-medium text-gray-800">📞</span>
+            <span className="text-lg font-medium text-gray-800">Phone: (+92) 333 5081913 </span>
+          </div>
+
+          <div className="flex items-center justify-center space-x-3">
+            <span className="text-2xl font-medium text-gray-800">✉️</span>
+            <span className="text-lg font-medium text-gray-800">Email:helphumanrights@gmail.com</span>
+          </div>
+
+          <div className="flex items-center justify-center space-x-3">
+            <span className="text-2xl font-medium text-gray-800">🏢</span>
+            <span className="text-lg font-medium text-gray-800">
+              Address: FC Building, Main University Rd, 
+              near Askari Park,
+               Eissa Nagri,Karachi,75270, Sindh , Pakistan.
+            </span>
+          </div>
+        </div>
+
+        {/* Google Map Integration */}
+        <div className="mt-6 h-64 w-full rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
           <iframe
             className="w-full h-full"
             title="Google Map"
@@ -20,36 +42,46 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Right Side */}
-      <div className="w-full md:w-1/2 p-4">
+      {/* Right Side: Contact Form */}
+      <div className="w-full md:w-1/2 p-6">
+        <h2 className="text-3xl font-extrabold text-center mb-6 text-gray-900">
+          Contact Us
+        </h2>
+
         <form>
           <div className="mb-4">
-            <label className="block text-sm font-medium mb-1" htmlFor="name">Name</label>
+            <label className="block text-sm font-medium mb-1 text-gray-800" htmlFor="name">Name</label>
             <input
               id="name"
               type="text"
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring focus:ring-blue-500"
+              placeholder="Enter your name"
             />
           </div>
+
           <div className="mb-4">
-            <label className="block text-sm font-medium mb-1" htmlFor="email">Email</label>
+            <label className="block text-sm font-medium mb-1 text-gray-800" htmlFor="email">Email</label>
             <input
               id="email"
               type="email"
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring focus:ring-blue-500"
+              placeholder="Enter your email"
             />
           </div>
+
           <div className="mb-4">
-            <label className="block text-sm font-medium mb-1" htmlFor="message">Message</label>
+            <label className="block text-sm font-medium mb-1 text-gray-800" htmlFor="message">Message</label>
             <textarea
               id="message"
               rows="4"
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring focus:ring-blue-500"
+              placeholder="Write your message"
             ></textarea>
           </div>
+
           <button
             type="submit"
-            className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500"
+            className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500 transition-colors duration-300"
           >
             Submit
           </button>

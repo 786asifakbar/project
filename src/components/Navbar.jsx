@@ -135,8 +135,14 @@ const Navbar = () => {
                 >
                  Help Job Bank
                 </Link>
-                
-                
+                <Link
+                  to="/WaterPlant"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
+                  onClick={() => setIsImpactMenuOpen(false)}
+                >
+                 Water Plant
+                </Link>
+               
                 
                 
                 
@@ -249,6 +255,13 @@ const Navbar = () => {
                   onClick={handleMenuToggle}
                 >
                   Help Job Bank
+                </Link> 
+                <Link
+                  to="/WaterPlant"
+                  className="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded"
+                  onClick={handleMenuToggle}
+                >
+                Water Plant
                 </Link> 
                 {/* Add more sub-links */}
               </div>
