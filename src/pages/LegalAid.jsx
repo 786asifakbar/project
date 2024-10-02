@@ -1,21 +1,19 @@
-import React from 'react';
+
+import { NavLink } from 'react-router-dom'; // Import NavLink for routing
 
 const LegalAid = () => {
   return (
     <>
       {/* Hero Section */}
       <div
-        className="relative flex items-center justify-center h-[50vh] bg-cover bg-center text-white"
+        className="relative flex items-center justify-center h-[30vh] bg-cover bg-center text-black"
         style={{ backgroundImage: `url('/Web-Icon.png')` }}
       >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="absolute inset-0 opacity-50"></div>
         <div className="relative text-center">
-          <h1 className="text-6xl md:text-7xl font-extrabold drop-shadow-2xl leading-tight">
+          <h1 className="text-4xl md:text-4xl lg:text-6xl font-extrabold drop-shadow-2xl leading-tight">
             Legal Aid: Justice for All
           </h1>
-          <p className="text-xl md:text-2xl text-white mt-4">
-            Offering Free Legal Assistance to Those in Need
-          </p>
         </div>
       </div>
 
@@ -40,14 +38,6 @@ const LegalAid = () => {
               every individual has the opportunity to seek and receive fair
               treatment under the law.
             </p>
-            <div className="mt-8">
-              <a
-                href="#"
-                className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg transform transition duration-500 hover:scale-105 hover:bg-blue-700"
-              >
-                Learn More
-              </a>
-            </div>
           </div>
 
           {/* Image Section */}
@@ -119,12 +109,12 @@ const LegalAid = () => {
             Become a part of this impactful journey to ensure that justice is
             accessible to all, regardless of financial circumstances.
           </p>
-          <a
-            href="#"
-            className="inline-block px-12 py-4 bg-blue-600 text-white font-bold rounded-full shadow-lg transform transition duration-500 hover:scale-105 hover:bg-blue-700"
+          <NavLink
+            to="/DonationForm"
+            className="inline-block px-12 py-4 bg-red-600 text-white font-bold rounded-full shadow-lg transform transition duration-500 hover:scale-105 hover:bg-red-700"
           >
             Donate Now
-          </a>
+          </NavLink>
         </section>
       </div>
     </>

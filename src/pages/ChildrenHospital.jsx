@@ -8,12 +8,10 @@ const ChildrenHospital = () => {
       >
         <div className="absolute inset-0 opacity-50"></div>
         <div className="relative text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg">
-            Welcome to Children's Hospital
+          <h1 className="text-4xl md:text-4xl lg:text-6xl font-extrabold drop-shadow-lg">
+            Children's Hospital
           </h1>
-          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-            Compassionate care for every child, every day.
-          </p>
+
         </div>
       </div>
 

@@ -100,6 +100,47 @@ const Navbar = () => {
                 >
                   Health
                 </Link>
+                <Link
+                  to="/ChildrenHospital"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
+                  onClick={() => setIsImpactMenuOpen(false)}
+                >
+                 Children Hospital
+                </Link>
+                 <Link
+                  to="/Orphans"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
+                  onClick={() => setIsImpactMenuOpen(false)}
+                >
+                 Orphans
+                </Link>
+                <Link
+                  to="/OldAgeHome"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
+                  onClick={() => setIsImpactMenuOpen(false)}
+                >
+                 Old Age Home
+                </Link>
+                <Link
+                  to="/LegalAid"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
+                  onClick={() => setIsImpactMenuOpen(false)}
+                >
+                 Legal Aid
+                </Link>
+                <Link
+                  to="/HelpJobBank"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
+                  onClick={() => setIsImpactMenuOpen(false)}
+                >
+                 Help Job Bank
+                </Link>
+                
+                
+                
+                
+                
+                
                 {/* Add more links as needed */}
               </div>
             )}
@@ -112,7 +153,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/DonationForm"
-            className="bg-white text-red-600 px-4 py-2 rounded shadow-lg hover:bg-gray-100"
+            className="bg-red-500  text-white px-4 py-2 rounded shadow-xl hover:bg-red-700"
           >
             Donate Now
           </Link>
@@ -173,6 +214,42 @@ const Navbar = () => {
                 >
                   Health
                 </Link>
+                <Link
+                  to="/ChildrenHospital"
+                  className="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded"
+                  onClick={handleMenuToggle}
+                >
+                 Children Hospital
+                </Link>
+                <Link
+                  to="/Orphans"
+                  className="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded"
+                  onClick={handleMenuToggle}
+                >
+                   Orphans
+                </Link>
+                <Link
+                  to="/OldAgeHome"
+                  className="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded"
+                  onClick={handleMenuToggle}
+                >
+                 Old Age Home
+                </Link>
+                <Link
+                  to="/LegalAid"
+                  className="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded"
+                  onClick={handleMenuToggle}
+                >
+                  LegalAid
+                </Link> 
+               
+                <Link
+                  to="/HelpJobBank"
+                  className="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded"
+                  onClick={handleMenuToggle}
+                >
+                  Help Job Bank
+                </Link> 
                 {/* Add more sub-links */}
               </div>
             )}
