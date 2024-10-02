@@ -7,11 +7,14 @@ const HelpJobBank = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center py-10 bg-gradient-to-br from-gray-200 via-blue-200 to-white">
-        <h1 className="text-4xl font-extrabold mb-10 text-center text-gray-800">
+       <div className="relative w-full h-[30vh] md:h-[30vh] bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
+        <div className="flex items-center justify-center h-full bg-opacity-60">
+          <h1 className="text-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center drop-shadow-lg">
           Join Us: Hiring or Seeking Jobs
-        </h1>
-
+          </h1>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center py-10 bg-white">
         {/* Buttons to toggle between Hiring and Job Seeker forms */}
         <div className="flex space-x-4 mb-10">
           <button

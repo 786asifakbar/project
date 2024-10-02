@@ -1,5 +1,14 @@
 const Contact = () => {
   return (
+    <> 
+     <div className="relative w-full h-[30vh] md:h-[30vh] bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
+        <div className="flex items-center justify-center h-full bg-opacity-60">
+          <h1 className="text-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center drop-shadow-lg">
+         Contact Us 
+          </h1>
+        </div>
+      </div>
+   
     <div className="flex flex-col md:flex-row p-6 lg:p-12">
       {/* Left Side: Get in Touch */}
       <div className="w-full md:w-1/2 p-6 bg-white shadow-lg rounded-lg mb-6 md:mb-0 transform hover:scale-105 transition-transform duration-300">
@@ -88,6 +97,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
