@@ -35,11 +35,11 @@ const JobSeekerForm = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-gradient-to-br from-purple-500 via-blue-500 to-teal-400 p-10 rounded-3xl shadow-lg">
-      <h1 className="text-4xl font-extrabold text-center text-white mb-8">
+    <div className="max-w-4xl mx-auto bg-gradient-to-br from-purple-500 via-blue-500 to-teal-400 p-6 md:p-10 rounded-3xl shadow-lg">
+      <h1 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-6 md:mb-8">
         Job Seeker Application Form
       </h1>
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
         {/* Left column (Personal Info) */}
         <div className="space-y-6">
           <div>
@@ -52,7 +52,7 @@ const JobSeekerForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              className="w-full px-4 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
               placeholder="Enter your full name"
               required
             />
@@ -68,7 +68,7 @@ const JobSeekerForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              className="w-full px-4 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
               placeholder="Enter your email address"
               required
             />
@@ -84,7 +84,7 @@ const JobSeekerForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              className="w-full px-4 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
               placeholder="Enter your phone number"
               required
             />
@@ -100,7 +100,7 @@ const JobSeekerForm = () => {
               name="dob"
               value={formData.dob}
               onChange={handleChange}
-              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              className="w-full px-4 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
               required
             />
           </div>
@@ -118,7 +118,7 @@ const JobSeekerForm = () => {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              className="w-full px-4 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
               placeholder="Enter your address"
               required
             />
@@ -134,7 +134,7 @@ const JobSeekerForm = () => {
               name="education"
               value={formData.education}
               onChange={handleChange}
-              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              className="w-full px-4 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
               placeholder="Enter your highest qualification"
               required
             />
@@ -150,7 +150,7 @@ const JobSeekerForm = () => {
               name="experience"
               value={formData.experience}
               onChange={handleChange}
-              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              className="w-full px-4 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
               placeholder="Enter years of experience"
             />
           </div>
@@ -165,7 +165,7 @@ const JobSeekerForm = () => {
               name="skills"
               value={formData.skills}
               onChange={handleChange}
-              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              className="w-full px-4 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
               placeholder="Enter your key skills"
             />
           </div>
@@ -179,13 +179,13 @@ const JobSeekerForm = () => {
               id="file"
               name="file"
               onChange={handleFileChange}
-              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              className="w-full px-4 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
-        
+
         {/* Submit Button */}
-        <div className="col-span-2 flex justify-center mt-8">
+        <div className="col-span-2 flex justify-center mt-6 md:mt-8">
           <button
             type="submit"
             className="px-6 py-3 bg-gradient-to-r from-black to-gray-800 text-white font-bold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 transform"

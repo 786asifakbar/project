@@ -28,7 +28,7 @@ const JobRequirementForm = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-gradient-to-br from-green-400 via-blue-400 to-teal-500 p-10 rounded-3xl shadow-lg">
+    <div className="max-w-5xl mx-auto bg-gradient-to-br from-green-400 via-blue-400 to-teal-500 p-10 rounded-3xl shadow-lg">
       <h1 className="text-4xl font-extrabold text-center text-white mb-8">
         Job Requirement Form
       </h1>
