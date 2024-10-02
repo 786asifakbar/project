@@ -52,9 +52,9 @@ const HelpJobBank = () => {
 
           {/* Hiring Form */}
           {isHiring && (
-            <div className="w-screen md:w-screen md:h-screen lg:h-screen h-screen  pb-96
+            <div className="w-screen md:w-screen md:h-screen lg:h-screen h-screen pb-96
              bg-white p-8 rounded-3xl shadow-lg transform transition duration-500 hover:scale-105 flex flex-col">
-              <h2 className="text-3xl font-bold text-center text-gray-800 mb-6 mt-lg-[100vh]">
+              <h2 className="text-3xl font-bold text-center text-gray-800 mb-6 mt-lg-[100%]">
                 Hiring Form
               </h2>
               <div className="flex-grow">

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-red-600 text-white py-10 px-5">
+    <footer className="bg-red-600 text-white pt-40 py-10 px-5">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* About Section */}
         <div className="flex flex-col">
@@ -78,5 +78,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

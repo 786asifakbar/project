@@ -11,21 +11,21 @@ const members = [
     name: 'Allama Mohammad Tahir',
     designation: 'President',
     community: 'Center Executive',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: 'DSC_0106-removebg-preview.png', // Replace with actual image URL
   },
   {
     id: 3,
     name: 'Umair Paracha',
     designation: 'General Security',
     community: 'Center Executive',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: '/umair.jpeg', // Replace with actual image URL
   },
   {
     id: 4,
     name: 'Saifullah Paracha',
     designation: 'Joined Security',
     community: 'Center Executive',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: '/saif.jpeg', // Replace with actual image URL
   },
 ];
 
