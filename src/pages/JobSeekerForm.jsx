@@ -1,141 +1,197 @@
 import { useState } from 'react';
 
 const JobSeekerForm = () => {
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    dob: '',
+    address: '',
+    education: '',
+    experience: '',
+    skills: '',
+    file: null,
+  });
 
-  // Handler for file input
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
-  // Form submission handler
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('Form submitted:', selectedFile);
+  const handleFileChange = (e) => {
+    setFormData({
+      ...formData,
+      file: e.target.files[0],
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Data:', formData);
+    alert('Form submitted successfully!');
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
-      <h1 className="text-3xl font-extrabold text-center text-blue-600 mb-8">Job Seeker Application Form</h1>
-
-      <form onSubmit={handleSubmit}>
-        {/* Position and Employment Type */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div className="max-w-4xl mx-auto bg-gradient-to-br from-purple-500 via-blue-500 to-teal-400 p-10 rounded-3xl shadow-lg">
+      <h1 className="text-4xl font-extrabold text-center text-white mb-8">
+        Job Seeker Application Form
+      </h1>
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* Left column (Personal Info) */}
+        <div className="space-y-6">
           <div>
-            <label className="block text-lg font-semibold mb-2">Position Applying For</label>
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required />
+            <label htmlFor="name" className="block text-lg font-semibold text-white">
+              Full Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              placeholder="Enter your full name"
+              required
+            />
           </div>
-          <div className="flex flex-col">
-            <label className="mb-2 text-lg font-semibold">Employment Type</label>
-            <div className="flex space-x-4">
-              <label className="flex items-center">
-                <input type="checkbox" className="mr-2" /> Full-Time
-              </label>
-              <label className="flex items-center">
-                <input type="checkbox" className="mr-2" /> Part-Time
-              </label>
-              <label className="flex items-center">
-                <input type="checkbox" className="mr-2" /> Contract
-              </label>
-            </div>
-          </div>
-        </div>
 
-        {/* Personal Information */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
-            <label className="block text-lg font-semibold mb-2">Full Name</label>
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required />
+            <label htmlFor="email" className="block text-lg font-semibold text-white">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              placeholder="Enter your email address"
+              required
+            />
           </div>
+
           <div>
-            <label className="block text-lg font-semibold mb-2">Nationality</label>
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required />
+            <label htmlFor="phone" className="block text-lg font-semibold text-white">
+              Phone Number
+            </label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              placeholder="Enter your phone number"
+              required
+            />
           </div>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
-            <label className="block text-lg font-semibold mb-2">Address</label>
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required />
+            <label htmlFor="dob" className="block text-lg font-semibold text-white">
+              Date of Birth
+            </label>
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              value={formData.dob}
+              onChange={handleChange}
+              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              required
+            />
           </div>
+        </div>
+
+        {/* Right column (Additional Info) */}
+        <div className="space-y-6">
           <div>
-            <label className="block text-lg font-semibold mb-2">Date of Birth</label>
-            <input type="date" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required />
+            <label htmlFor="address" className="block text-lg font-semibold text-white">
+              Address
+            </label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              placeholder="Enter your address"
+              required
+            />
           </div>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
-            <label className="block text-lg font-semibold mb-2">Phone</label>
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required />
+            <label htmlFor="education" className="block text-lg font-semibold text-white">
+              Education
+            </label>
+            <input
+              type="text"
+              id="education"
+              name="education"
+              value={formData.education}
+              onChange={handleChange}
+              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              placeholder="Enter your highest qualification"
+              required
+            />
           </div>
+
           <div>
-            <label className="block text-lg font-semibold mb-2">Email</label>
-            <input type="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required />
+            <label htmlFor="experience" className="block text-lg font-semibold text-white">
+              Work Experience (Years)
+            </label>
+            <input
+              type="text"
+              id="experience"
+              name="experience"
+              value={formData.experience}
+              onChange={handleChange}
+              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              placeholder="Enter years of experience"
+            />
           </div>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="flex items-center">
-            <input type="checkbox" className="mr-2" />
-            <label className="font-semibold">Driving License</label>
-          </div>
           <div>
-            <label className="block text-lg font-semibold mb-2">Years of Work Experience</label>
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" />
+            <label htmlFor="skills" className="block text-lg font-semibold text-white">
+              Skills
+            </label>
+            <input
+              type="text"
+              id="skills"
+              name="skills"
+              value={formData.skills}
+              onChange={handleChange}
+              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+              placeholder="Enter your key skills"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="file" className="block text-lg font-semibold text-white">
+              Upload Your CV (PDF, DOCX)
+            </label>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              onChange={handleFileChange}
+              className="w-full px-5 py-3 border border-white rounded-lg text-black focus:ring-2 focus:ring-white transition-transform duration-300 hover:scale-105"
+            />
           </div>
         </div>
-
-        {/* Upload CV */}
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">Upload Your CV</h2>
-          <input
-            type="file"
-            accept=".pdf,.doc,.docx"
-            onChange={handleFileChange}
-            className="block w-full text-sm text-gray-500 border rounded-lg p-3 cursor-pointer focus:ring-2 focus:ring-blue-500 transition"
-            required
-          />
-          {selectedFile && <p className="mt-2 text-sm text-gray-600">Selected file: {selectedFile.name}</p>}
-        </div>
-
-        {/* Educational Background */}
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">Educational Background</h2>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-4">
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Degree/Course" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="University/Institute" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Year of Graduation" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Grade" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="City" />
-          </div>
-        </div>
-
-        {/* Employment History */}
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">Employment History</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-4">
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Company" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Position" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Year" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Reason for Leaving" />
-          </div>
-        </div>
-
-        {/* Skills & Training */}
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">Skills & Training</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-4">
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Skill/Training Achievement" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Level" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Year" />
-            <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" placeholder="Institute" />
-          </div>
-        </div>
-
+        
         {/* Submit Button */}
-        <div className="flex justify-center mb-8">
-          <button type="submit" className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition ease-in-out duration-300">Submit Application</button>
+        <div className="col-span-2 flex justify-center mt-8">
+          <button
+            type="submit"
+            className="px-6 py-3 bg-gradient-to-r from-black to-gray-800 text-white font-bold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 transform"
+          >
+            Submit Application
+          </button>
         </div>
       </form>
     </div>
