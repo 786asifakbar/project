@@ -39,7 +39,7 @@ const JobSeekerForm = () => {
       <h1 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-6 md:mb-8">
         Job Seeker Application Form
       </h1>
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
         {/* Left column (Personal Info) */}
         <div className="space-y-6">
           <div>
@@ -185,7 +185,7 @@ const JobSeekerForm = () => {
         </div>
 
         {/* Submit Button */}
-        <div className="col-span-2 flex justify-center mt-6 md:mt-8">
+        <div className="col-span-1 sm:col-span-2 flex justify-center mt-6 md:mt-8">
           <button
             type="submit"
             className="px-6 py-3 bg-gradient-to-r from-black to-gray-800 text-white font-bold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 transform"

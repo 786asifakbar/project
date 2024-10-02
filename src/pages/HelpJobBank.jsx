@@ -9,12 +9,12 @@ const HelpJobBank = () => {
     <>
        <div className="relative w-full h-[30vh] md:h-[30vh] bg-cover bg-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
         <div className="flex items-center justify-center h-full bg-opacity-60">
-          <h1 className="text-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center drop-shadow-lg">
+          <h1 className="text-black text-4xl sm:text-4xl md:text-6xl lg:text-6xl font-bold text-center drop-shadow-lg">
           Join Us: Hiring or Seeking Jobs
           </h1>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center py-10 bg-white">
+      <div className="flex flex-col items-center justify-center pb-96 sm:pb-52 md:pb-38 lg:pb-32 pt-10 bg-white">
         {/* Buttons to toggle between Hiring and Job Seeker forms */}
         <div className="flex space-x-4 mb-10">
           <button
@@ -36,10 +36,10 @@ const HelpJobBank = () => {
         </div>
 
         {/* Conditional rendering based on state */}
-        <div className="flex flex-col md:flex-row gap-10 items-stretch ">
+        <div className="flex flex-col md:flex-row gap-10 items-stretch">
           {/* Job Seeker Form */}
           {!isHiring && (
-            <div className="w-screen md:w-screen md:h-screen h-screen bg-white p-8 rounded-3xl shadow-lg 
+            <div className="w-screen md:w-screen md:h-screen h-screen pb-96 bg-white p-8 rounded-3xl shadow-lg 
                             transform transition duration-500 hover:scale-105 flex flex-col">
               <h2 className="text-3xl font-bold text-center text-gray-800 mb-6 mt-lg-[100%]">
                 Job Seeker Form
@@ -52,8 +52,9 @@ const HelpJobBank = () => {
 
           {/* Hiring Form */}
           {isHiring && (
-            <div className="w-screen md:w-screen md:h-screen lg:h-screen h-screen bg-white p-8 rounded-3xl shadow-lg transform transition duration-500 hover:scale-105 flex flex-col">
-              <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+            <div className="w-screen md:w-screen md:h-screen lg:h-screen h-screen  pb-96
+             bg-white p-8 rounded-3xl shadow-lg transform transition duration-500 hover:scale-105 flex flex-col">
+              <h2 className="text-3xl font-bold text-center text-gray-800 mb-6 mt-lg-[100vh]">
                 Hiring Form
               </h2>
               <div className="flex-grow">
