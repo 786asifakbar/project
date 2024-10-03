@@ -31,6 +31,10 @@ const PopupModal = () => {
       if (timeoutIndex < timeouts.length) {
         setTimeout(() => {
           openModal();
+          // Automatically close the modal after 3 seconds
+          setTimeout(() => {
+            closeModal();
+          }, 5000); // Close after 3 seconds
         }, timeouts[timeoutIndex]);
         timeoutIndex += 1;
       } else {
