@@ -12,11 +12,11 @@ const DonationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Thank you for your donation of $${amount}`);
-    // Here you would typically handle payment processing or redirect to a payment gateway
+    // Handle payment gateway logic here
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto bg-white p-6 sm:p-8 lg:p-12 rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold mb-6 text-center text-black">Make a Donation</h2>
 
       <div className="mb-6">
@@ -29,17 +29,35 @@ const DonationForm = () => {
         {/* Donation Amount */}
         <div className="mb-6">
           <label htmlFor="amount" className="block text-sm font-semibold text-black mb-2">Donation Amount</label>
-          <div className="flex gap-4 justify-start">
-            <button type="button" className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300" onClick={() => setAmount(25)}>$25</button>
-            <button type="button" className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition duration-300" onClick={() => setAmount(50)}>$50</button>
-            <button type="button" className="px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition duration-300" onClick={() => setAmount(100)}>$100</button>
+          <div className="flex flex-wrap gap-4 justify-start">
+            <button
+              type="button"
+              className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 mb-2 sm:mb-0"
+              onClick={() => setAmount(25)}
+            >
+              $25
+            </button>
+            <button
+              type="button"
+              className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition duration-300 mb-2 sm:mb-0"
+              onClick={() => setAmount(50)}
+            >
+              $50
+            </button>
+            <button
+              type="button"
+              className="px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition duration-300 mb-2 sm:mb-0"
+              onClick={() => setAmount(100)}
+            >
+              $100
+            </button>
             <input
               type="number"
               id="amount"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               placeholder="Other Amount"
-              className="flex-1 px-4 py-2 border rounded-lg text-black shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 px-4 py-2 border rounded-lg text-black shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2 sm:mb-0"
             />
           </div>
         </div>
