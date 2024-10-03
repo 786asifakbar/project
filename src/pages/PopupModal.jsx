@@ -50,7 +50,7 @@ const PopupModal = () => {
       {/* Modal */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90 pt-24"
         >
           <div className="bg-blue-100 text-black rounded-lg w-full max-w-xs sm:max-w-lg p-4 sm:p-6 shadow-lg">
             <div className="flex justify-between items-center">
