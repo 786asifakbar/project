@@ -1,10 +1,11 @@
-
+import PopupModal from './PopupModal';
 import HelpProjects from './HelpProjects';
 import Carousel from './Carousel';
 
 const SupportPage = () => {
   return (
     <>
+    <PopupModal/>
       {/* Hero Section */}
       <div className="py-20 text-black text-center" style={{ backgroundImage: `url('/Web-Icon.png')` }}>
         <h1 className="text-5xl md:text-6xl font-bold drop-shadow-lg">

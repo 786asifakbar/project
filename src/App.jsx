@@ -18,7 +18,7 @@ import Footer from './components/Footer';
 import ChildrenHospital from './pages/ChildrenHospital';
 import Orphans from './pages/Orphans';
 import NotFound from './pages/NotFound'; // Don't forget to import the NotFound component
-import JazzCashButton from './pages/JazzCashButton';
+import PopupModal from './pages/PopupModal';
 import HiringForm from './pages/HiringForm';
 import JobSeekerForm from './pages/JobSeekerForm';
 const App = () => {
@@ -44,7 +44,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/HiringForm" element={<HiringForm />} />
         <Route path="/JobSeekerForm" element={<JobSeekerForm />} />
-        <Route path="/JazzCashButton" element={<JazzCashButton />}/>
+        <Route path="/PopupModal" element={<PopupModal />}/>
         <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 */}
       </Routes>
       <Footer />
