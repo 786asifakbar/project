@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const JobRequirementForm = () => {
+const HiringForm = () => {
   const [formData, setFormData] = useState({
     companyName: '',
     position: '',
@@ -197,4 +197,4 @@ const JobRequirementForm = () => {
   );
 };
 
-export default JobRequirementForm;
+export default HiringForm;
