@@ -39,7 +39,7 @@ const HelpJobBank = () => {
         <div className="flex flex-col md:flex-row gap-10 items-stretch">
           {/* Job Seeker Form */}
           {!isHiring && (
-            <div className="w-screen md:w-screen md:h-screen h-screen pb-96 bg-white p-8 rounded-3xl shadow-lg 
+            <div className="w-screen md:w-screen md:h-screen h-screen pb-96 sm:pb-52 md:pb-38 lg:pb-32  bg-white p-8 rounded-3xl  
                             transform transition duration-500 hover:scale-105 flex flex-col">
               <div className="flex-grow">
                 <JobSeekerForm />
@@ -49,8 +49,8 @@ const HelpJobBank = () => {
 
           {/* Hiring Form */}
           {isHiring && (
-            <div className="w-screen md:w-screen md:h-screen lg:h-screen h-screen pb-96
-             bg-white p-8 rounded-3xl shadow-lg transform transition duration-500 hover:scale-105 flex flex-col">
+            <div className="w-screen md:w-screen md:h-screen lg:h-screen h-screen pb-96 sm:pb-52 md:pb-38 lg:pb-32 
+             bg-white p-8 rounded-3xl transform transition duration-500 hover:scale-105 flex flex-col">
               <div className="flex-grow">
                 <HiringForm />
               </div>

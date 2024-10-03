@@ -1,175 +1,159 @@
-import { useState } from 'react';
+import React, { useState } from "react";
 
 const DonationForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    amount: '',
-    currency: 'USD',
-    paymentMethod: '',
-  });
-  const [errors, setErrors] = useState({});
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [amount, setAmount] = useState("");
+  const [frequency, setFrequency] = useState("one-time");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [billingAddress, setBillingAddress] = useState("");
+  const [isAnonymous, setIsAnonymous] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState("credit-card");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const validateForm = () => {
-    const newErrors = {};
-    if (!formData.name) newErrors.name = 'Name is required';
-    if (!formData.email) newErrors.email = 'Email is required';
-    if (!formData.amount) newErrors.amount = 'Amount is required';
-    if (!formData.paymentMethod) newErrors.paymentMethod = 'Payment Method is required';
-    return newErrors;
-  };
-
-  const openConfirmationDialog = (e) => {
-    e.preventDefault(); // Prevent form submission
-    const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length) {
-      setErrors(validationErrors);
-      return;
-    }
-    setErrors({});
-    setIsModalOpen(true);
-  };
-
-  const closeConfirmationDialog = () => {
-    setIsModalOpen(false);
-  };
-
-  const confirmDonation = () => {
-    alert(`Thank you, ${formData.name}! Your donation of ${formData.amount} ${formData.currency} has been processed.`);
-    setIsModalOpen(false);
-    setFormData({
-      name: '',
-      email: '',
-      amount: '',
-      currency: 'USD',
-      paymentMethod: '',
-    }); // Reset the form fields
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Thank you for your donation of $${amount}`);
+    // Here you would typically handle payment processing or redirect to a payment gateway
   };
 
   return (
-    <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-center mb-10 text-blue-600">
-        Donate to Support Human Rights
-      </h1>
+    <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold mb-6 text-center text-black">Make a Donation</h2>
 
-      <form onSubmit={openConfirmationDialog} className="bg-white p-8 rounded-lg shadow-lg max-w-xl mx-auto">
+      <div className="mb-6">
+        <p className="text-lg mb-4 text-black text-center">
+          Your contribution helps us achieve our mission. Every donation counts in making a difference.
+        </p>
+      </div>
+
+      <form onSubmit={handleSubmit}>
+        {/* Donation Amount */}
         <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="name">Name</label>
+          <label htmlFor="amount" className="block text-sm font-semibold text-black mb-2">Donation Amount</label>
+          <div className="flex gap-4 justify-start">
+            <button type="button" className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300" onClick={() => setAmount(25)}>$25</button>
+            <button type="button" className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition duration-300" onClick={() => setAmount(50)}>$50</button>
+            <button type="button" className="px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition duration-300" onClick={() => setAmount(100)}>$100</button>
+            <input
+              type="number"
+              id="amount"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+              placeholder="Other Amount"
+              className="flex-1 px-4 py-2 border rounded-lg text-black shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+
+        {/* Donation Frequency */}
+        <div className="mb-6">
+          <label className="block text-sm font-semibold text-black mb-2">Donation Frequency</label>
+          <div className="flex items-center gap-6">
+            <label className="flex items-center text-black">
+              <input
+                type="radio"
+                name="frequency"
+                value="one-time"
+                checked={frequency === "one-time"}
+                onChange={() => setFrequency("one-time")}
+                className="mr-2"
+              />
+              One-Time Donation
+            </label>
+            <label className="flex items-center text-black">
+              <input
+                type="radio"
+                name="frequency"
+                value="recurring"
+                checked={frequency === "recurring"}
+                onChange={() => setFrequency("recurring")}
+                className="mr-2"
+              />
+              Recurring Donation
+            </label>
+          </div>
+        </div>
+
+        {/* Donor Information */}
+        <div className="mb-6">
+          <label htmlFor="name" className="block text-sm font-semibold text-black mb-2">Full Name</label>
           <input
-            id="name"
-            name="name"
             type="text"
-            value={formData.name}
-            onChange={handleChange}
-            className={`w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-            placeholder="Enter your name"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Your Name"
+            className="w-full px-4 py-2 border rounded-lg text-black shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.name && <span className="text-red-500 text-sm">{errors.name}</span>}
         </div>
 
         <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">Email</label>
+          <label htmlFor="email" className="block text-sm font-semibold text-black mb-2">Email Address</label>
           <input
-            id="email"
-            name="email"
             type="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-            placeholder="Enter your email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Your Email"
+            className="w-full px-4 py-2 border rounded-lg text-black shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
         </div>
 
         <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="amount">Donation Amount</label>
+          <label htmlFor="billingAddress" className="block text-sm font-semibold text-black mb-2">Billing Address</label>
           <input
-            id="amount"
-            name="amount"
-            type="number"
-            value={formData.amount}
-            onChange={handleChange}
-            className={`w-full border ${errors.amount ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-            placeholder="Enter amount"
+            type="text"
+            id="billingAddress"
+            value={billingAddress}
+            onChange={(e) => setBillingAddress(e.target.value)}
+            placeholder="Billing Address"
+            className="w-full px-4 py-2 border rounded-lg text-black shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.amount && <span className="text-red-500 text-sm">{errors.amount}</span>}
         </div>
 
+        {/* Anonymous Donation */}
         <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="currency">Currency</label>
-          <select
-            id="currency"
-            name="currency"
-            value={formData.currency}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value="PKR">PKR</option>
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
-          </select>
+          <label className="flex items-center text-black">
+            <input
+              type="checkbox"
+              checked={isAnonymous}
+              onChange={() => setIsAnonymous(!isAnonymous)}
+              className="mr-2"
+            />
+            I wish to remain anonymous
+          </label>
         </div>
 
+        {/* Payment Method */}
         <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="paymentMethod">Payment Method</label>
+          <label htmlFor="paymentMethod" className="block text-sm font-semibold text-black mb-2">Payment Method</label>
           <select
             id="paymentMethod"
-            name="paymentMethod"
-            value={formData.paymentMethod}
-            onChange={handleChange}
-            className={`w-full border ${errors.paymentMethod ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            value={paymentMethod}
+            onChange={(e) => setPaymentMethod(e.target.value)}
+            className="w-full px-4 py-2 border rounded-lg text-black shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <option value="">Select a method</option>
-            <option value="Credit Card">Credit Card</option>
-            <option value="PayPal">PayPal</option>
-            <option value="Bank Transfer">Bank Transfer</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="jazzcash">JazzCash</option>
+            <option value="bank-transfer">Bank Transfer</option>
           </select>
-          {errors.paymentMethod && <span className="text-red-500 text-sm">{errors.paymentMethod}</span>}
         </div>
 
-        <div className="mt-8">
+        {/* Submit Button */}
+        <div className="mb-6">
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold py-3 rounded-lg hover:from-blue-700 hover:to-blue-600 transition-all duration-300"
+            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Donate Now
           </button>
         </div>
       </form>
 
-      {/* Confirmation Dialog */}
-      {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 w-96">
-            <h2 className="text-lg font-bold mb-4">Confirm Your Donation</h2>
-            <p>Please confirm your donation of {formData.amount} {formData.currency} using {formData.paymentMethod}.</p>
-            <div className="flex justify-between mt-6">
-              <button
-                onClick={closeConfirmationDialog}
-                className="text-gray-600 hover:text-gray-800"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={confirmDonation}
-                className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
-              >
-                Confirm & Donate
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Post-Donation Engagement */}
+      <div className="text-center mt-8">
+        <p className="text-sm text-black">Thank you for your support! Your donation makes a significant impact.</p>
+      </div>
     </div>
   );
 };
