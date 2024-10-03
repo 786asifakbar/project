@@ -30,7 +30,7 @@ const HiringForm = () => {
   return (
     <div className="max-w-5xl mx-auto bg-gradient-to-br from-green-400 via-blue-400 to-teal-500 p-8 md:p-10 rounded-3xl shadow-lg">
       <h1 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-8">
-        Job Requirement Form
+        Job Hiring Form
       </h1>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -189,7 +189,7 @@ const HiringForm = () => {
             type="submit"
             className="px-6 py-3 bg-gradient-to-r from-black to-gray-800 text-white font-bold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 transform"
           >
-            Submit Job Requirement
+            Submit
           </button>
         </div>
       </form>

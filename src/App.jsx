@@ -46,7 +46,6 @@ const App = () => {
         <Route path="/JobSeekerForm" element={<JobSeekerForm />} />
         <Route path="/JazzCashButton" element={<JazzCashButton />}/>
         <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 */}
-        
       </Routes>
       <Footer />
 
